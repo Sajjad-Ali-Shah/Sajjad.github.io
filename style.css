@@ -1,0 +1,684 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #02010c;
+    color: white;
+}
+
+hr {
+    border: 0;
+    margin: 1.35em auto;
+    max-width: 100%;
+    background-position: 50%;
+    box-sizing: border-box;
+  }
+
+  .slash-3 {
+    height: 10px;
+    background-image: linear-gradient(45deg,
+    hsla(229, 89%, 58%, 0),
+    hsla(231, 100%, 60%, 0) 33.33%,
+    rgb(0 171 241) 33.33%,
+    rgb(0 181 255) 66.67%,
+    hsla(234, 98%, 62%, 0) 66.67%,
+    hsla(224, 100%, 63%, 0) 100%);
+    background-size: 10px 100%;
+    width: 590px;
+  }
+
+.spacific-word{
+    color: #00b5ff;
+}
+
+/* scrollbar css */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00b5ff;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #74d8ffe5; 
+  }
+
+/*=========== Font Family Start ==============*/
+
+/* For Paragraph */
+@font-face {
+    font-family: Aspergit;
+    src: url(./assets/fonts/Aspergit.otf);
+}
+
+/* For Name only */
+@font-face {
+    font-family: Mastyle;
+    src: url(./assets/fonts/MastyleScript.otf);
+}
+
+/* For Headings */
+@font-face {
+    font-family: Gamine;
+    src: url(./assets/fonts/Gamine.ttf);
+}
+
+/* For Header Heading Only */
+@font-face {
+    font-family: Genau;
+    src: url(./assets/fonts/GENAU-DEMO.otf);
+}
+/*=========== Font Family Start ==============*/
+
+/*=========== Navbar Start ==============*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 70px;
+    font-family: Aspergit;
+}
+
+.Logo_img{
+    width: 60px;
+    height: 60px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    margin: 0 5px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.toggle_btn{
+    color: #00b5ff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+.dropdown_menu{
+    position: absolute;
+    right: 4rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Aspergit;
+    transition: height 0.2s;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*=========== Navbar End ==============*/
+
+
+/*=========== Header Section Start ==============*/
+header{
+    margin: 90px 70px;
+}
+
+header .name-heading{
+    text-align: center;
+    font-size: 45px;
+    font-family: Mastyle;
+}
+
+header .data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .data .profile-pic{
+    width: 500px;
+    height: 500px;
+}
+
+header .data .content .Header-heading{
+    font-size: 5rem;
+    font-family: Genau;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 3px;
+    margin-top: 35px;
+}
+
+header .data .content img{
+    width: 50px;
+    height: 50px;
+}
+
+/*=========== Header Section End ==============*/
+
+
+/*=========== About Section Start ==============*/
+.About{
+    margin: 80px 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.About .about-data{
+    width: 50%;
+}
+
+.About .about-heading{
+    font-size: 50px;
+    font-family: Gamine;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.About .about-details{
+    font-size: 21px;
+    font-family: Aspergit;
+    letter-spacing: 1px;
+    color: rgb(190, 190, 190);
+    text-align: left;
+    margin-right: 40px;
+}
+
+.About .experience{
+    width: 50%;
+    margin-left: 30px;
+}
+
+.About .experience-heading{
+    font-size: 50px;
+    font-family: Gamine;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.About .experience .icons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+}
+
+.About .experience .icons .icon{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 60px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.tooltip{
+    position: relative;
+    cursor: pointer;
+    font-family: Aspergit;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.tooltip:hover .icon{
+    color: #00b5ff;
+}
+
+.tooltip .tooltipText{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #00b5ff;
+    color: #02010c;
+    white-space: nowrap;
+    padding: 7px 15px;
+    border-radius: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tooltipText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 13px solid;
+    border-color: #00b5ff #0000 #0000 #0000;
+}
+
+.tooltip:hover .tooltipText{
+    top: -30%;
+    visibility: visible;
+    opacity: 1;
+}
+/*=========== About Section End ==============*/
+
+
+/*=========== Portfolio Section Start ==============*/
+
+.Portfolio{
+    margin: 90px 70px;
+}
+
+.Portfolio .protfolio-heading{
+    text-align: center;
+    font-size: 50px;
+    font-family: Gamine;
+    margin-bottom: 30px;
+}
+
+.Portfolio .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Portfolio .container .box{
+    width: 380px;
+    height: 400px;
+    background-color: black;
+    background-position: top;
+    transition: ease-in-out 9s;
+}
+
+.container .box.box1{
+    background: url(./assets/images/blogger.png);
+    background-size: cover;
+}
+
+.container .box.box2{
+    background: url(./assets/images/protfolio-light.png);
+    background-size: cover;
+}
+
+.container .box.box3{
+    background: url(./assets/images/SpendSome.png);
+    background-size: cover;
+}
+
+.container .box:hover{
+    background-position: bottom;
+}
+
+.Portfolio-btn{
+    font-family: Gamine;
+    text-align: center;
+    border: 2px solid;
+    margin: 0px auto;
+    width: 95px;
+    display: block;
+    margin-top: 50px;
+}
+/*=========== Portfolio Section End ==============*/
+
+
+/*=========== Working Section Start ==============*/
+
+.working-process{
+    margin: 90px 70px;
+}
+
+.working-process .working-heading{
+    font-size: 50px;
+    font-family: Gamine;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.No-1{
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 30px 30px;
+}
+
+.working-process .work-content{
+    display: flex;
+    align-items: center;
+}
+
+.working-process .work-content h2{
+    font-size: 40px;
+    font-family: Gamine;
+    width: 85%;
+    margin-bottom: 15px;
+}
+
+.working-process .work-content p{
+    font-size: 20px;
+    font-family: Aspergit;
+    width: 85%;
+    letter-spacing: 1px;
+    color: rgb(190, 190, 190);
+}
+
+.working-process .work-content img{
+    width: 90px;
+}
+/*=========== Working Section End ==============*/
+
+
+/*=========== Contact Section Start ==============*/
+
+.contact{
+    margin: 90px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contact-info h1{
+    font-size: 80px;
+    font-family: Gamine;
+    margin-bottom: 30px;
+}
+
+.contact-info .social-icons{
+    display: flex;
+    align-items: center;
+}
+
+.contact-info .social-icons .social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 40px;
+    height: 40px;
+    margin: 35px 20px;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icon a{
+    font-size: 32px;
+}
+
+.social-icon:hover a{
+    color: #00b5ff;
+}
+
+.contact-info .social-icons .social-icon:hover{
+    border: 1px solid #00b5ff;
+    color: #00b5ff;
+}
+
+.contact-form{
+    width: 450px;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 30px;
+}
+
+.contact-form form label{
+    font-size: 22px;
+    font-family: Gamine;
+}
+
+.contact-form form input{
+    padding: 7px 0px;
+    font-size: 18px;
+    border: 0px;
+    background-color: #02010c;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    color: white;
+    font-family: Aspergit;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.contact-form form input:focus{
+    border-bottom: 2px solid #00b5ff;
+}
+
+.contact-form form textarea:focus{
+    border-bottom: 2px solid #00b5ff;
+}
+
+.contact-form form textarea{
+    padding: 7px 5px;
+    font-size: 18px;
+    border: 0px;
+    background-color: #02010c;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    color: white;
+    font-family: Aspergit;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.contact-form form .btn{
+    width: 115px;
+    padding: 9px 5px;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 15px auto;
+    font-family: Aspergit;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form form .btn:hover{
+    border: 1px solid #00b5ff;
+}
+
+.contact-form form .btn:hover i{
+    color: #00b5ff;
+}
+
+/*=========== Contact Section End ==============*/
+
+
+
+
+/*=========== Media Quries ==============*/
+
+/* Responsive Navbar Media Query */
+@media only screen and (max-width: 858px) {
+    nav ul{
+        display: none;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .dorpdown_menu{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .dropdown_menu{
+        left: 4rem;
+        width: unset;
+    }
+}
+
+/* Tablet Media Query: 768px */
+
+@media only screen and (max-width:768px) {
+    .data{
+        flex-direction: column;
+    }
+
+    .Header-heading{
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .About{
+        flex-direction: column;
+    }
+
+    .About .about-data {
+        width: 100%;
+    }
+
+    .About .experience {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .Portfolio .container{
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+
+    .Portfolio .container .box{
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-info h1{
+        text-align: center;
+    }
+
+    .contact-info .social-icons{
+        justify-content: center;
+    }
+
+    .contact-form{
+        margin-top: 25px;
+    }
+}
+
+
+
+/* Mobile Media Query: 375px */
+
+@media only screen and (max-width: 375px) {
+    header .data .profile-pic{
+        width: 350px;
+        height: 350px;
+    }
+
+    header .data .content .Header-heading{
+        font-size: 2.4rem;
+        margin-top: 55px;
+    }
+
+    .slash-3{
+        width: 310px;
+    }
+
+    .About{
+        margin: 80px 30px;
+    }
+
+    .About .about-heading{
+        text-align: center;
+    }
+
+    .About .about-details{
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .About .experience{
+        margin-left: 0px;
+    }
+
+    .About .experience-heading{
+        text-align: center;
+    }
+
+    .About .experience .icons{
+        grid-template-columns: auto auto;
+    }
+
+    .Portfolio{
+        margin: 90px 30px;
+    }
+
+    .Portfolio .container{
+        justify-content: center;
+    }
+
+    .working-process{
+        margin: 90px 30px;
+    }
+
+    .working-process .work-content{
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+
+    .working-process .work-content h2{
+        text-align: center;
+        width: 100%;
+    }
+
+    .working-process .work-content p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact .contact-info h1{
+        font-size: 65px;
+    }
+
+    .contact-info .social-icons{
+        flex-wrap: wrap;
+    }
+
+    .contact-info .social-icons .social-icon{
+        margin: 10px;
+    }
+
+    .contact-form{
+        width: 335px;
+    }
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajjad</title>
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <!--======== Stylesheet ==============-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--======== Fontawesome stylesheet ==============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!--============= Navbar Start ===============-->
+    <nav>
+        <div class="logo"><img src="./assets/images/S_logo.PNG" class="Logo_img" alt="S_Logo"></div>
+
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="dropdown_menu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <!--=X==========X== Navbar End ===X===========X=-->
+
+
+    <!--============= Header Section Start ===============-->
+    <header id="Home">
+        <h2 class="name-heading"><span class="spacific-word">Sajjad Ali Shah</span></h2>
+        <div class="data">
+            <div class="image">
+                <img src="./assets/images/Sajjad.png" class="profile-pic" alt="">
+            </div>
+            <div class="content">
+                <h1 class="Header-heading">
+                    <span class="animate__animated animate__bounce">Your</span>
+                    <span>Next</span>
+                    <span>Interactive</span>
+                    <span>Experience!</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+    <!--==X=========X== Header Section End ===X===========X=-->
+
+    <hr class="slash-3">
+
+    <!--============= About Section Start ===============-->
+    <section class="About" id="About">
+        <!-- About -->
+        <div class="about-data">
+            <h1 class="about-heading">A little about <span class="spacific-word">me</span></h1>
+
+            <p class="about-details">
+                I am Sajjad Ali and have been delivering great results for over 4 years. Through my love of technology,
+                my hunger for innovation, and my close relationships with my clients, I provide strategic digital
+                solutions to small and mid-size businesses through my skills. I believe in honesty, integrity, and smart
+                work. I strongly assure a proactive work attitude, experience, and excellent communication skills. It
+                would be a great pleasure to work with you.<br>Best Regards,
+            </p>
+        </div>
+
+        <!-- Experties -->
+        <div class="experience">
+            <h1 class="experience-heading">Experience</h1>
+            <div class="icons">
+                <div class="tooltip">
+                    <span class="tooltipText">HTML 5</span>
+                    <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">CSS 3</span>
+                    <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">BootStrap</span>
+                    <div class="icon"><i class="fa-brands fa-bootstrap"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">JavaScript</span>
+                    <div class="icon"><i class="fa-brands fa-square-js"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">WordPress</span>
+                    <div class="icon"><i class="fa-brands fa-wordpress"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">Shopify</span>
+                    <div class="icon"><i class="fa-brands fa-shopify"></i></div>
+                </div>
+
+                <div class="tooltip">
+                    <span class="tooltipText">SquareSpace</span>
+                    <div class="icon"><i class="fa-brands fa-squarespace"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=X==========X== About Section End ==X===========X==-->
+
+    <hr class="slash-3">
+
+    <!--============= Portfolio Section Start ===============-->
+
+    <section class="Portfolio" id="Portfolio">
+        <h1 class="protfolio-heading">Portfolio</h1>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <a href="Portfolio.html" class="Portfolio-btn">View All</a>
+    </section>
+
+    <!--=X=========X=== Portfolio Section End ==X============X=-->
+
+    <hr class="slash-3">
+
+    <!--============= Work Section Start ===============-->
+
+    <section class="working-process">
+
+        <h1 class="working-heading wow animate__animated animate__flipInX">Working Process</h1>
+        <div class="No-1">
+            <div class="work-content">
+                <div>
+                    <h2>01. Brief & Analytics</h2>
+                    <p>First of all, I conduct an interview and learn all the details of a project and the specific
+                        details of a business. I research competitors, collect references, form an idea for a project,
+                        and develop a structure for a future site.</p>
+                </div>
+
+                <div>
+                    <img src="./assets/images/briefing.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="No-1">
+            <div class="work-content">
+                <div>
+                    <h2>02. Prototype & Design</h2>
+                    <p>I design a website prototype while keeping the user experience (UX) in mind. After approval, I
+                        develop two visual design concepts (UI) for two blocks (the main screen and the subsequent
+                        block). Then I started full-fledged development based on the selected concept.</p>
+                </div>
+
+                <div>
+                    <img src="./assets/images/prototyping.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="No-1">
+            <div class="work-content">
+                <div>
+                    <h2>03. Layout & Launch</h2>
+                    <p>I begin site construction once the design is approved. I develop applications, connect forms and
+                        services, and perform basic SEO setup. Then I test the website for errors and launch it.</p>
+                </div>
+
+                <div>
+                    <img src="./assets/images/launch.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=X==========X== Work Section End ==X============X=-->
+
+    <hr class="slash-3">
+
+    <!--============= Contact Section Start ===============-->
+
+    <section class="contact" id="Contact">
+        <div class="contact-info">
+            <h1>Let's Build Creative <br> Things <span class="spacific-word">Together!</span></h1>
+
+            <div class="social-icons">
+                <div class="social-icon"><a href="https://www.facebook.com/profile.php?id=100026096984663" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                <div class="social-icon"><a href="http://wa.me/+923065593559" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                <div class="social-icon"><a href="https://www.youtube.com/@marvelcoder" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="social-icon"><a href="https://www.pinterest.com/MarvelCoder/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" id="name" placeholder="Your Good Name">
+
+                <input type="email" id="email" placeholder="Your Email">
+
+                <textarea name="message" id="message" cols="30" rows="8" placeholder="How may I help you!"></textarea>
+
+                <button type="submit" class="btn">Send &nbsp;<i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!--=X==========X== Contact Section End ==X============X=-->
+
+    <!-- Contact form Script -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            let body = "<h4>Name:</h4>" + name + "<br/> <h4>Email:</h4>" + email + "<br/> <h4>Message:</h4>" + message;
+
+
+            Email.send({
+                SecureToken : "adf92ff3-e500-49af-8037-c366b8af82f3",
+                To: 'sajjadalishah505@gmail.com',
+                From: "sa2152488@gmail.com",
+                Subject: "New Enquiry From Client",
+                Body: body
+            }).then(
+                message => alert("Message Sent Successfully!!")
+            );
+        }
+    </script>
+
+</body>
+
+</html>

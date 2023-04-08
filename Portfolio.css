@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #02010c;
+    color: white;
+}
+
+/*=========== Font Family Start ==============*/
+
+/* For Headings */
+@font-face {
+    font-family: Gamine;
+    src: url(./assets/fonts/Gamine.ttf);
+}
+
+/*=========== Font Family Start ==============*/
+
+.Back-btn{
+    margin: 50px 60px;
+}
+
+.Back-btn i{
+    font-size: 40px;
+    color: #00b5ff;
+}
+
+.Portfolio{
+    margin: 60px 70px;
+}
+
+.Portfolio .portfolio-heading{
+    font-family: Gamine;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.container .box{
+    width: 380px;
+    height: 400px;
+    background-color: black;
+    background-position: top;
+    transition: ease-in-out 9s;
+}
+
+.container .box.box1{
+    background: url(./assets/images/blogger.png);
+    background-size: cover;
+}
+
+.container .box.box2{
+    background: url(./assets/images/protfolio-light.png);
+    background-size: cover;
+}
+
+.container .box.box3{
+    background: url(./assets/images/portfolio-dark.png);
+    background-size: cover;
+}
+
+.container .box.box4{
+    background: url(./assets/images/SpendSome.png);
+    background-size: cover;
+}
+
+.container .box.box5{
+    background: url(./assets/images/Ata\ Technologies.png);
+    background-size: cover;
+}
+
+.container .box.box6{
+    background: url(./assets/images/dezyre\ collection.png);
+    background-size: cover;
+}
+
+.container .box.box7{
+    background: url(./assets/images/Global\ Divide.png);
+    background-size: cover;
+}
+
+.container .box.box8{
+    background: url(./assets/images/jsywlg.png);
+    background-size: cover;
+}
+
+.container .box.box9{
+    background: url(./assets/images/Mentor.png);
+    background-size: cover;
+}
+
+.container .box:hover{
+    background-position: bottom;
+}
+
+
+
+/*=========== Media Quries ==============*/
+
+/* Tablet Media Query: 768px */
+
+@media only screen and (max-width:768px) {
+
+    .Portfolio .portfolio-heading{
+        text-align: center;
+    }
+
+    .Portfolio .container{
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+
+    .Portfolio .container .box{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+/* Mobile Media Query: 375px */
+
+@media only screen and (max-width: 425px) {
+
+    .Portfolio{
+        margin: 60px 30px;
+    }
+
+    .Portfolio .container{
+        justify-content: center;
+    }
+
+    .Portfolio .container .box{
+        width: 345px;
+        height: 345px;
+    }
+}
